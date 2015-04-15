@@ -14,6 +14,8 @@ public class Scan {
 		reference[referenceLength][0]="Davis Cook"; 			reference[referenceLength++][1]="Stage";
 		reference[referenceLength][0]="Pavan Tauh"; 			reference[referenceLength++][1]="Stage";
 		reference[referenceLength][0]="Princie Kim"; 			reference[referenceLength++][1]="Stage";
+		reference[referenceLength][0]="guestpass1";				reference[referenceLength++][1]="All Access";
+		reference[referenceLength][0]="guestpass2";				reference[referenceLength++][1]="Stage";
 		for(int i = reference.length-1; i>=0; i--) {
 			if(reference[i][0]==null){}
 			else
