@@ -35,8 +35,8 @@ public class Scan {
 		reference[referenceLength][0]="Pablo Greenlee"; 		reference[referenceLength++][1]="Stage";
 		reference[referenceLength][0]="William Seymour"; 		reference[referenceLength++][1]="Stage";
 		reference[referenceLength][0]="Ryan Stanford"; 			reference[referenceLength++][1]="Stage";
-		reference[referenceLength][0]="letmein2";				reference[referenceLength++][1]="All Access";
-		reference[referenceLength][0]="letmein1";				reference[referenceLength++][1]="Stage";
+		reference[referenceLength][0]="All Access";				reference[referenceLength++][1]="All Access - Guest Pass: Check with DJ/Jonathan";
+		reference[referenceLength][0]="Stage";					reference[referenceLength++][1]="Stage - Guest Pass: Check with DJ/Jonathan";
 		
 		//Read Out Stored Names
 		for(int i = reference.length-1; i>=0; i--) {
