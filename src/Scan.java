@@ -11,6 +11,7 @@ public class Scan {
 			else
 				System.out.println(reference[i]);
 		}
+		System.out.println("Instructions: type 'add' to add names");
 		Scanner s = new Scanner(System.in);
 		String input;
 		while(true){
@@ -21,8 +22,10 @@ public class Scan {
 				System.out.println("Entered Add Mode, Type 'q' to Quit");
 				while(okay){
 					input = s.nextLine();
-					if(input.equalsIgnoreCase("q"))
+					if(input.equalsIgnoreCase("q")) {
 						okay = false;
+						System.out.println("Exited Add Mode");
+					}
 					else
 						reference[referenceLength++]=input;
 				}
