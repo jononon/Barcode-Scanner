@@ -9,6 +9,7 @@ import java.util.*;
  * @version 1.5
  * @since Wed. April 14, 2015
  */
+
 public class Scan {
 	public static void main (String args[]) {
 		//Create the Array
