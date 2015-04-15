@@ -37,7 +37,7 @@ public class Scan {
 					else {
 						reference[referenceLength][0]=input;
 						System.out.println("Access?");
-						reference[referenceLength][0]=s.nextLine();
+						reference[referenceLength++][1]=s.nextLine();
 					}
 				}
 			} else {
