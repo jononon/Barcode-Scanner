@@ -1,9 +1,21 @@
 import java.util.*;
 
+/**
+ * The Scan class is a sloppily written class that stores the names and access rights of 
+ * people in a multi-dimensional array, and then references a scanned barcode against
+ * this array. There is also an add function to add names to the array.
+ * 
+ * @author Jonathan Damico (github.com/jononon)
+ * @version 1.5
+ * @since Wed. April 14, 2015
+ */
 public class Scan {
 	public static void main (String args[]) {
+		//Create the Array
 		String[][] reference = new String[100][2];
 		int referenceLength = 0;
+		
+		//		INITIAL INPUTS
 		reference[referenceLength][0]="Jonathan Damico"; 		reference[referenceLength++][1]="All Access";
 		reference[referenceLength][0]="DJ Lesh"; 				reference[referenceLength++][1]="All Access";
 		reference[referenceLength][0]="Jonathan Goldberg"; 		reference[referenceLength++][1]="All Access";
@@ -16,17 +28,26 @@ public class Scan {
 		reference[referenceLength][0]="Princie Kim"; 			reference[referenceLength++][1]="Stage";
 		reference[referenceLength][0]="letmein2";				reference[referenceLength++][1]="All Access";
 		reference[referenceLength][0]="letmein1";				reference[referenceLength++][1]="Stage";
+		
+		//Read Out Stored Names
 		for(int i = reference.length-1; i>=0; i--) {
 			if(reference[i][0]==null){}
 			else
 				System.out.println(reference[i][1]+"---"+reference[i][0]);
 		}
+		
+		//Give the operator a set of simple usage instructions.
 		System.out.println("\nInstructions: type 'add' to add names");
+		
+		//INIT Scanner and Input
 		Scanner s = new Scanner(System.in);
 		String input;
 		while(true){
+			//Read Barcode
 			System.out.println("\nReady");
 			input = s.nextLine();
+			
+			//Add Mode
 			if(input.equalsIgnoreCase("add")||input.equalsIgnoreCase("Add")){
 				boolean okay = true;
 				System.out.println("Entered Add Mode, Type 'q' to Quit");
@@ -42,7 +63,10 @@ public class Scan {
 						reference[referenceLength++][1]=s.nextLine();
 					}
 				}
-			} else {
+			} 
+			
+			//Cross Reference Scanned Code with Array
+			else {
 				int found = 150;
 				for(int i = reference.length-1;i>=0;i--){
 					if(reference[i][0]==null){}
@@ -51,6 +75,8 @@ public class Scan {
 							found = i;
 					}
 				}
+				
+				//Print out whether the person has access, and to what areas they do
 				if(found!=150)
 					System.out.println("Access: "+reference[found][1]);
 				else
