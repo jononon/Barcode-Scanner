@@ -20,13 +20,21 @@ public class Scan {
 		reference[referenceLength][0]="Jonathan Damico"; 		reference[referenceLength++][1]="All Access";
 		reference[referenceLength][0]="DJ Lesh"; 				reference[referenceLength++][1]="All Access";
 		reference[referenceLength][0]="Jonathan Goldberg"; 		reference[referenceLength++][1]="All Access";
+		reference[referenceLength][0]="Jacob Swanson"; 			reference[referenceLength++][1]="All Access";
+		reference[referenceLength][0]="Keith Jordan"; 			reference[referenceLength++][1]="All Access";
+		reference[referenceLength][0]="Edgar Jurado"; 			reference[referenceLength++][1]="All Access";
 		reference[referenceLength][0]="Caroline Cook"; 			reference[referenceLength++][1]="Stage";
+		reference[referenceLength][0]="Julia Cosgrove"; 		reference[referenceLength++][1]="Stage";
+		reference[referenceLength][0]="J.P. Cherry"; 			reference[referenceLength++][1]="Stage";
 		reference[referenceLength][0]="Chase Garvey-Daniels"; 	reference[referenceLength++][1]="Stage";
 		reference[referenceLength][0]="Grace Burton"; 			reference[referenceLength++][1]="Stage";
 		reference[referenceLength][0]="Jaya Nayar"; 			reference[referenceLength++][1]="Stage";
 		reference[referenceLength][0]="Davis Cook"; 			reference[referenceLength++][1]="Stage";
 		reference[referenceLength][0]="Pavan Tauh"; 			reference[referenceLength++][1]="Stage";
 		reference[referenceLength][0]="Princie Kim"; 			reference[referenceLength++][1]="Stage";
+		reference[referenceLength][0]="Pablo Greenlee"; 		reference[referenceLength++][1]="Stage";
+		reference[referenceLength][0]="William Seymour"; 		reference[referenceLength++][1]="Stage";
+		reference[referenceLength][0]="Ryan Stanford"; 			reference[referenceLength++][1]="Stage";
 		reference[referenceLength][0]="letmein2";				reference[referenceLength++][1]="All Access";
 		reference[referenceLength][0]="letmein1";				reference[referenceLength++][1]="Stage";
 		
@@ -72,7 +80,7 @@ public class Scan {
 				for(int i = reference.length-1;i>=0;i--){
 					if(reference[i][0]==null){}
 					else{
-						if(reference[i][0].equals(input))
+						if(reference[i][0].equalsIgnoreCase(input))
 							found = i;
 					}
 				}
