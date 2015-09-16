@@ -94,4 +94,7 @@ public class Scan {
 		}
 	}
 	
+	public static String test () {
+		return("Compiled Correctly, no compile time errors");
+	}
 }
